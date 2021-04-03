@@ -32,3 +32,15 @@ Tabela de conteúdos
 
 - [ ] Criação dos scripts Terraform 
 - [x] Levantamento da arquitetura
+
+
+
+### Autor
+---
+
+Lucas Dynczuki
+
+Entre em contato! 💚
+
+[![Linkedin Badge](https://img.shields.io/badge/-Lucas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucasdynczuki/)](https://www.linkedin.com/in/lucasdynczuki/) 
+[![Outlook Badge](https://img.shields.io/badge/-lucas.dynczuki@outlook.com-blue?style=flat-square&logo=Outlook&logoColor=white&link=mailto:lucas.dynczuki@outlook.com)](mailto:lucas.dynczuki@outlook.com)
