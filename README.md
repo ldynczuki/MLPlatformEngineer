@@ -10,9 +10,10 @@ Tabela de conteúdos
 =================
 <!--ts-->
    * [Sobre](#sobre)
+   * [Arquitetura](#arquitetura)
    * [Instalação](#instalacao)
    * [Pré-Requisitos](#pre-requisitos)
-   * [Local files](#local-files)
+   * [Como executar o projeto](#executar-terraform)
    * [Remote files](#remote-files)
    * [Multiple files](#multiple-files)
    * [Combo](#combo)
@@ -32,6 +33,9 @@ Tabela de conteúdos
 - [x] Levantamento da arquitetura
 
 
+# <a name="arquitetura"><a/> Arquitetura
+============
+
 # <a name="instalacao"><a/> Instalação
 ============
 
@@ -47,12 +51,13 @@ Tabela de conteúdos
 
 Antes de começar, você vai precisar ter uma conta na AWS, para isso acesse [AWS Console](https://aws.amazon.com/).
 
-Após criar a conta, será necessário a criação de um usuário e grupo, para realizar a geração da *acess_key* e *secret_key*,
+Após criar a conta, será necessário a criação de um usuário e grupo, para realizar a geração da **acess_key** e **secret_key**,
 necessárias para o credenciamento nos serviços AWS.
 
 - Descrever como criar usuário e grupo e gerar chaves.
 
-### 🚀 Como executar o projeto (Terraform)
+# <a name="executar-terraform"><a/> 🚀 Como executar o projeto (Terraform)
+============
 
 Navegue até o diretório onde os scripts terraform estão para executar os passos abaixo:
 
@@ -63,10 +68,10 @@ $ terraform init
 # O subcomando plan procura no diretório de trabalho atual para a configuração do módulo raiz. Exibe os serviços que serão criados
 $ terraform plan
 
-# Realiza a criação dos serviços nos scripts `.tf`. Quando o Terraform solicitar que você confirme, digite `yes` e pressione Enter
+# Realiza a criação dos serviços nos scripts extensão .tf. Quando o Terraform solicitar que você confirme, digite yes e pressione Enter
 $ terraform apply
 
-# Para excluir os serviços, execute terraform `destroy`.
+# Para excluir os serviços, execute terraform destroy.
 $ terraform destroy
 ```
 
