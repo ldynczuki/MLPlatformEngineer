@@ -3,7 +3,6 @@
 O projeto consiste em implementar uma arquitetura completa que consome a Punk Api no
 [endpoint](https://api.punkapi.com/v2/beers/random) e ingere em um Kinesis Stream que terá 2 consumidores.
 
-[![GitHub license](https://img.shields.io/github/license/ldynczuki/MLPlatformEngineer)](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/LICENSE)
 
 
 Tabela de conteúdos
@@ -19,7 +18,9 @@ Tabela de conteúdos
    * [Combo](#combo)
    * [Tests](#testes)
    * [Tecnologias](#tecnologias)
+   * [Autor](#autor)
    * [Referências](#referencias)
+   * [Licença](#licenca)
 <!--te-->
 
 <h4 align="center"> 
@@ -33,17 +34,14 @@ Tabela de conteúdos
 - [x] Levantamento da arquitetura
 
 
-# <a name="arquitetura"><a/> Arquitetura
-============
+# <a name="arquitetura"><a/> 🏢 Arquitetura
 
-# <a name="instalacao"><a/> Instalação
-============
+# <a name="instalacao"><a/> 👨‍💻 Instalação
 
 - Instalação/Configuração AWS CLI
 - Instalação/Configuração Terraform
 
-# <a name="pre-requisitos"><a/> Pré-Requisitos
-============
+# <a name="pre-requisitos"><a/> ☑️ Pré-Requisitos
 
 - Criar conta na AWS
 - Criação de usuário/grupo no AWS IAM
@@ -57,7 +55,6 @@ necessárias para o credenciamento nos serviços AWS.
 - Descrever como criar usuário e grupo e gerar chaves.
 
 # <a name="executar-terraform"><a/> 🚀 Como executar o projeto (Terraform)
-============
 
 Navegue até o diretório onde os scripts terraform estão para executar os passos abaixo:
 
@@ -76,8 +73,7 @@ $ terraform destroy
 ```
 
 
-🛠 Tecnologias
-============
+# <a name="tecnologias"><a/> 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -86,8 +82,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [AWS](https://aws.amazon.com/)
 
 
-Autor
-============
+# <a name="autor"><a/> 🤓 Autor
 
 Lucas Dynczuki
 
@@ -97,14 +92,13 @@ Entre em contato! 💚
 [![Outlook Badge](https://img.shields.io/badge/-lucas.dynczuki@outlook.com-blue?style=flat-square&logo=Outlook&logoColor=white&link=mailto:lucas.dynczuki@outlook.com)](mailto:lucas.dynczuki@outlook.com)
 
 
-Referências
-============
+# <a name="referencias"><a/>  📚 Referências
 
 https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
 https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started
 
 
-📝 Licença
-============
+# <a name="licenca"><a/>  📝 Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
+[![GitHub license](https://img.shields.io/github/license/ldynczuki/MLPlatformEngineer)](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/LICENSE)
