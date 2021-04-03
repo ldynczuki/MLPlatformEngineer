@@ -32,32 +32,42 @@ Tabela de conteúdos
 - [x] Levantamento da arquitetura
 
 
+# <a name="instalacao"><a/> Instalação
+============
+
+- Instalação/Configuração AWS CLI
+- Instalação/Configuração Terraform
+
 # <a name="pre-requisitos"><a/> Pré-Requisitos
 ============
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+- Criar conta na AWS
+- Criação de usuário/grupo no AWS IAM
+- Gerar Key e Secret para o usuário
 
-### 🎲 Rodando o Back End (servidor)
+Antes de começar, você vai precisar ter uma conta na AWS, para isso acesse [AWS Console](https://aws.amazon.com/).
+
+Após criar a conta, será necessário a criação de um usuário e grupo, para realizar a geração da *acess_key* e *secret_key*,
+necessárias para o credenciamento nos serviços AWS.
+
+- Descrever como criar usuário e grupo e gerar chaves.
+
+### 🚀 Como executar o projeto (Terraform)
+
+Navegue até o diretório onde os scripts terraform estão para executar os passos abaixo:
 
 ```bash
-# Clone este repositório
-$ git clone <https://github.com/tgmarinho/nlw1>
+# Inicialize o projeto, que baixa um plug-in que permite ao Terraform interagir com o Docker.
+$ terraform init
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd nlw1
+# O subcomando plan procura no diretório de trabalho atual para a configuração do módulo raiz. Exibe os serviços que serão criados
+$ terraform plan
 
-# Vá para a pasta server
-$ cd server
+# Realiza a criação dos serviços nos scripts `.tf`. Quando o Terraform solicitar que você confirme, digite `yes` e pressione Enter
+$ terraform apply
 
-# Instale as dependências
-$ npm install
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
-
-# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+# Para excluir os serviços, execute terraform `destroy`.
+$ terraform destroy
 ```
 
 
@@ -84,6 +94,9 @@ Entre em contato! 💚
 
 Referências
 ============
+
+https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
+https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started
 
 
 📝 Licença
