@@ -26,3 +26,9 @@ Tabela de conteúdos
 <h4 align="center"> 
 	🚧 🚀 Em construção...  🚧
 </h4>
+
+
+### Features
+
+- [ ] Criação dos scripts Terraform 
+- [x] Levantamento da arquitetura
