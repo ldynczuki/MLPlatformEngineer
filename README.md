@@ -9,15 +9,13 @@ O projeto consiste em implementar uma arquitetura completa que consome a Punk Ap
 Tabela de conteúdos
 =================
 <!--ts-->
-   * [Sobre](#Sobre)
-   * [Tabela de Conteúdo](#tabela-de-conteudo)
+   * [Sobre](#sobre)
    * [Instalação](#instalacao)
-   * [Como usar](#como-usar)
-      * [Pré-Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
+   * [Pré-Requisitos](#pre-requisitos)
+   * [Local files](#local-files)
+   * [Remote files](#remote-files)
+   * [Multiple files](#multiple-files)
+   * [Combo](#combo)
    * [Tests](#testes)
    * [Tecnologias](#tecnologias)
    * [Referências](#referencias)
@@ -34,8 +32,7 @@ Tabela de conteúdos
 - [x] Levantamento da arquitetura
 
 
-
-Pré-Requisitos
+# <a name="pre-requisitos"><a/> Pré-Requisitos
 ============
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
@@ -64,10 +61,18 @@ $ npm run dev:server
 ```
 
 
+🛠 Tecnologias
+============
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Python](https://www.python.org/)
+- [Terraform](https://www.terraform.io/)
+- [AWS](https://aws.amazon.com/)
 
 
-### Autor
----
+Autor
+============
 
 Lucas Dynczuki
 
@@ -75,3 +80,13 @@ Entre em contato! 💚
 
 [![Linkedin Badge](https://img.shields.io/badge/-Lucas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucasdynczuki/)](https://www.linkedin.com/in/lucasdynczuki/) 
 [![Outlook Badge](https://img.shields.io/badge/-lucas.dynczuki@outlook.com-blue?style=flat-square&logo=Outlook&logoColor=white&link=mailto:lucas.dynczuki@outlook.com)](mailto:lucas.dynczuki@outlook.com)
+
+
+Referências
+============
+
+
+📝 Licença
+============
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
