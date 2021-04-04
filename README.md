@@ -10,8 +10,8 @@ Tabela de conteúdos
 <!--ts-->
    * [Sobre](#sobre)
    * [Arquitetura](#arquitetura)
-   * [Instalação](#instalacao)
    * [Pré-Requisitos](#pre-requisitos)
+   * [Instalação](#instalacao)
    * [Como executar o projeto](#executar-terraform)
    * [Tecnologias](#tecnologias)
    * [Autor](#autor)
@@ -55,23 +55,73 @@ Para isso você será necessário configurar:
   <img alt="Arquitetura" title="Arquitetura" src="./imagens/arquitetura.png" />
 </h1>
 
-# <a name="instalacao"><a/> 👨‍💻 Instalação
 
-- Instalação/Configuração AWS CLI
-- Instalação/Configuração Terraform
 
 # <a name="pre-requisitos"><a/> ☑️ Pré-Requisitos
 
-- Criar conta na AWS
-- Criação de usuário/grupo no AWS IAM
-- Gerar Key e Secret para o usuário
 
-Antes de começar, você vai precisar ter uma conta na AWS, para isso acesse [AWS Console](https://aws.amazon.com/).
+#### Criar conta na AWS
+   * Antes de começar, você vai precisar ter uma conta na AWS, para isso acesse [AWS Console](https://aws.amazon.com/).
 
-Após criar a conta, será necessário a criação de um usuário e grupo, para realizar a geração da **acess_key** e **secret_key**,
-necessárias para o credenciamento nos serviços AWS.
+#### Criação de usuário/grupo no AWS IAM
 
-- Descrever como criar usuário e grupo e gerar chaves.
+   1. Entre no console da AWS e pesquise pelo serviço **IAM**;
+   2. No menu à esquerda clique em "users";
+   3. Clique no botão "add user";
+      3.1. Insira um nome para o usuário, no meu caso foi `admin`;
+      3.2. Em `Select AWS access type` marque a primeira caixa `Programmatic access Enables an access key ID and secret access key for the AWS API, CLI, SDK, and other development tools.`;
+      3.3. Clique em `Next:Permissions`;
+      3.4. Caso não tenha nenhum grupo já criado, clique em `create group`;
+      3.5. Na janela que abrir, insira um nome para o grupo, no meu caso foi `admin_group`;
+      3.6. Em `Filter Policies` marque a opção `AdministratorAccess` e clique em `Create group`;
+      3.7. Clique em `Next: Tags`;
+      3.8. Em `Add tags (optional)` não é necessário nenhum procedimento, apenas clique em `Next: Review`;
+      3.9. Será apresentado um sumário do usuário e grupo que serão criados, confira as informações e se estiverem de acordo com o desejado clique em `Create user`.
+
+
+#### Criação de Acess key
+
+Após criado o usuário no passo anterior, realize as seguintes etapas para criar as `acess_key`:
+
+   1. Entre no console da AWS e pesquise pelo serviço **IAM**;
+   2. No menu à esquerda clique em "users";
+   3. Clique no usuário que você criou;
+   4. Na janela que abrir, clique em `Security credentials`;
+      4.1. Clique em `Create acess key`;
+      4.2. As chaves de acesso serão geradas e deverá clicar para salvar o arquivo, pois a secret não será apresentada novamente;
+
+
+
+# <a name="instalacao"><a/> 👨‍💻 Instalação
+
+#### Instalação e Configuração do AWS CLI
+
+   1. Neste projeto, estou utilizando o sistema operacional Linux. Utilize o seguinte roteiro para a instalação [instalação AWS CLI](https://linuxhint.com/install_aws_cli_ubuntu/)
+   2. Com o AWS CLI instalado, você deverá configurar suas credenciais:
+   ```bash
+   # Execute o comando abaixo para iniciar a configuração
+   $ aws configure
+   ```
+      2.1. Insira a `Acess Key` e tecle Enter;
+      2.2. Insira a `Secret Key` e tecle Enter;
+      2.3. Insira o código da região, no meu caso é `sa-east-1`;
+      2.4. No valor formato de saída, pode deixar `None` e tecle Enter.
+
+#### Instalação e Configuração do Terraform
+
+   1. Clique no link para baixar o Terraform de acordo com seu sistema operacional [download Terraform](https://www.terraform.io/downloads.html):
+      1.1. No meu caso, estou utilizando Linux 64-bit, após clicar no link um arquivo será baixado.
+   2. Descompacte o arquivo e execute os comandos abaixo: 
+      2.1. [Roteiro de Instalação](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
+      ```bash
+      $ echo $PATH
+
+      # Mova o arquivo terraform para o resultado do echo $PATH no comando anterior
+      $ mv ~/Downloads/terraform /usr/local/bin/
+
+      # Verifique a instalação do Terraform
+      $ terraform -help
+      ```
 
 # <a name="executar-terraform"><a/> 🚀 Como executar o projeto (Terraform)
 
@@ -138,13 +188,15 @@ Este projeto esta sobe a licença [MIT](./LICENSE).
 
 # <a name="referencias"><a/>  📚 Referências
 
-https://aws.amazon.com/pt/
+https://aws.amazon.com/en/
+https://aws.amazon.com/en/cli/
 https://aws.amazon.com/en/lambda/
 https://aws.amazon.com/en/kinesis/data-streams/
 https://aws.amazon.com/en/kinesis/data-firehose/
 https://aws.amazon.com/en/glue/
 https://aws.amazon.com/pt/cloudwatch/
 https://aws.amazon.com/en/sagemaker/
+https://www.terraform.io/downloads.html
 https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
 https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function
@@ -157,3 +209,4 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/clou
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment
+https://linuxhint.com/install_aws_cli_ubuntu/
