@@ -84,18 +84,18 @@ As seguintes linguagens foram usadas na construção do projeto:
 - [Python](https://www.python.org/)
 - [Terraform](https://www.terraform.io/)
 
-## Serverless
+#### Serverless
 
 - [AWS Lambda](https://aws.amazon.com/en/lambda/)
 - [Amazon Kinesis](https://aws.amazon.com/en/kinesis/)
 - [Amazon Kinesis Data Firehose](https://aws.amazon.com/en/kinesis/data-firehose/)
 - [AWS Glue](https://aws.amazon.com/pt/glue/)
 
-## Plataforma de Machine Learning
+#### Plataforma de Machine Learning
 
 - [Amazon SageMaker](https://aws.amazon.com/en/sagemaker/)
 
-## Scheduler e monitoramento de serviços
+#### Scheduler e monitoramento de serviços
 
 - [Amazon Cloudwatch](https://aws.amazon.com/pt/cloudwatch/)
 
