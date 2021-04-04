@@ -36,6 +36,10 @@ Tabela de conteúdos
 
 # <a name="arquitetura"><a/> 🏢 Arquitetura
 
+<h1 align="center">
+  <img alt="Arquitetura" title="Arquitetura" src="./imagens/arquitetura.png" />
+</h1>
+
 # <a name="instalacao"><a/> 👨‍💻 Instalação
 
 - Instalação/Configuração AWS CLI
@@ -75,11 +79,25 @@ $ terraform destroy
 
 # <a name="tecnologias"><a/> 🛠 Tecnologias
 
-As seguintes ferramentas foram usadas na construção do projeto:
+As seguintes linguagens foram usadas na construção do projeto:
 
 - [Python](https://www.python.org/)
 - [Terraform](https://www.terraform.io/)
-- [AWS](https://aws.amazon.com/)
+
+## Serverless
+
+- [AWS Lambda](https://aws.amazon.com/en/lambda/)
+- [Amazon Kinesis](https://aws.amazon.com/en/kinesis/)
+- [Amazon Kinesis Data Firehose](https://aws.amazon.com/en/kinesis/data-firehose/)
+- [AWS Glue](https://aws.amazon.com/pt/glue/)
+
+## Plataforma de Machine Learning
+
+- [Amazon SageMaker](https://aws.amazon.com/en/sagemaker/)
+
+## Scheduler e monitoramento de serviços
+
+- [Amazon Cloudwatch](https://aws.amazon.com/pt/cloudwatch/)
 
 
 # <a name="autor"><a/> 🤓 Autor
@@ -94,8 +112,25 @@ Entre em contato! 💚
 
 # <a name="referencias"><a/>  📚 Referências
 
+https://aws.amazon.com/pt/
+https://aws.amazon.com/en/lambda/
+https://aws.amazon.com/en/kinesis/data-streams/
+https://aws.amazon.com/en/kinesis/data-firehose/
+https://aws.amazon.com/en/glue/
+https://aws.amazon.com/pt/cloudwatch/
+https://aws.amazon.com/en/sagemaker/
 https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
 https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kinesis_stream
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kinesis_firehose_delivery_stream
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/glue_catalog_database
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/glue_catalog_table
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_rule
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_target
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment
 
 
 # <a name="licenca"><a/>  📝 Licença
