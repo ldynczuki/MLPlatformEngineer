@@ -19,8 +19,8 @@ Tabela de conteúdos
    * [Tests](#testes)
    * [Tecnologias](#tecnologias)
    * [Autor](#autor)
-   * [Referências](#referencias)
    * [Licença](#licenca)
+   * [Referências](#referencias)
 <!--te-->
 
 <h4 align="center"> 
@@ -110,6 +110,13 @@ Entre em contato! 💚
 [![Outlook Badge](https://img.shields.io/badge/-lucas.dynczuki@outlook.com-blue?style=flat-square&logo=Outlook&logoColor=white&link=mailto:lucas.dynczuki@outlook.com)](mailto:lucas.dynczuki@outlook.com)
 
 
+# <a name="licenca"><a/>  📝 Licença
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
+[![GitHub license](https://img.shields.io/github/license/ldynczuki/MLPlatformEngineer)](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/LICENSE)
+
+
+
 # <a name="referencias"><a/>  📚 Referências
 
 https://aws.amazon.com/pt/
@@ -131,9 +138,3 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/clou
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment
-
-
-# <a name="licenca"><a/>  📝 Licença
-
-Este projeto esta sobe a licença [MIT](./LICENSE).
-[![GitHub license](https://img.shields.io/github/license/ldynczuki/MLPlatformEngineer)](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/LICENSE)
