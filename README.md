@@ -68,15 +68,15 @@ Para isso você será necessário configurar:
    1. Entre no console da AWS e pesquise pelo serviço **IAM**;
    2. No menu à esquerda clique em "users";
    3. Clique no botão "add user";
-      3.1. Insira um nome para o usuário, no meu caso foi `admin`;
-      3.2. Em `Select AWS access type` marque a primeira caixa `Programmatic access Enables an access key ID and secret access key for the AWS API, CLI, SDK, and other development tools.`;
-      3.3. Clique em `Next:Permissions`;
-      3.4. Caso não tenha nenhum grupo já criado, clique em `create group`;
-      3.5. Na janela que abrir, insira um nome para o grupo, no meu caso foi `admin_group`;
-      3.6. Em `Filter Policies` marque a opção `AdministratorAccess` e clique em `Create group`;
-      3.7. Clique em `Next: Tags`;
-      3.8. Em `Add tags (optional)` não é necessário nenhum procedimento, apenas clique em `Next: Review`;
-      3.9. Será apresentado um sumário do usuário e grupo que serão criados, confira as informações e se estiverem de acordo com o desejado clique em `Create user`.
+    3.1. Insira um nome para o usuário, no meu caso foi `admin`;
+    3.2. Em `Select AWS access type` marque a primeira caixa `Programmatic access Enables an access key ID and secret access key for the AWS API, CLI, SDK, and other development tools.`;
+    3.3. Clique em `Next:Permissions`;
+    3.4. Caso não tenha nenhum grupo já criado, clique em `create group`;
+    3.5. Na janela que abrir, insira um nome para o grupo, no meu caso foi `admin_group`;
+    3.6. Em `Filter Policies` marque a opção `AdministratorAccess` e clique em `Create group`;
+    3.7. Clique em `Next: Tags`;
+    3.8. Em `Add tags (optional)` não é necessário nenhum procedimento, apenas clique em `Next: Review`;
+    3.9. Será apresentado um sumário do usuário e grupo que serão criados, confira as informações e se estiverem de acordo com o desejado clique em `Create user`.
 
 
 #### Criação de Acess key
@@ -113,15 +113,15 @@ Após criado o usuário no passo anterior, realize as seguintes etapas para cria
       1.1. No meu caso, estou utilizando Linux 64-bit, após clicar no link um arquivo será baixado.
    2. Descompacte o arquivo e execute os comandos abaixo: 
       2.1. [Roteiro de Instalação](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
-      ```bash
-      $ echo $PATH
+   ```bash
+    $ echo $PATH
 
-      # Mova o arquivo terraform para o resultado do echo $PATH no comando anterior
-      $ mv ~/Downloads/terraform /usr/local/bin/
+   # Mova o arquivo terraform para o resultado do echo $PATH no comando anterior
+   $ mv ~/Downloads/terraform /usr/local/bin/
 
-      # Verifique a instalação do Terraform
-      $ terraform -help
-      ```
+   # Verifique a instalação do Terraform
+   $ terraform -help
+   ```
 
 # <a name="executar-terraform"><a/> 🚀 Como executar o projeto (Terraform)
 
