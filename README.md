@@ -63,13 +63,17 @@ necessárias para o credenciamento nos serviços AWS.
 Navegue até o diretório onde os scripts terraform estão para executar os passos abaixo:
 
 ```bash
-# Inicialize o projeto, que baixa um plug-in que permite ao Terraform interagir com o Docker.
+# Inicialize o projeto.
 $ terraform init
 
-# O subcomando plan procura no diretório de trabalho atual para a configuração do módulo raiz. Exibe os serviços que serão criados
+# Exibe um plano dos serviços que serão criados.
 $ terraform plan
 
-# Realiza a criação dos serviços nos scripts extensão .tf. Quando o Terraform solicitar que você confirme, digite yes e pressione Enter
+# Caso queira salvar o plano de execução dos serviços, substitua "path" por um caminho válido.
+$ terraform plan -out=path 
+
+# Realiza a criação dos serviços nos scripts extensão .tf. 
+# Quando o Terraform solicitar que você confirme, digite yes e pressione Enter.
 $ terraform apply
 
 # Para excluir os serviços, execute terraform destroy.
