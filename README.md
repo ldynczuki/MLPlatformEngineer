@@ -88,7 +88,7 @@ Após criado o usuário no passo anterior, realize as seguintes etapas para cria
    3. Clique no usuário que você criou;
    4. Na janela que abrir, clique em `Security credentials`;
       * Clique em `Create acess key`;
-      * As chaves de acesso serão geradas e deverá clicar para salvar o arquivo, pois a secret não será apresentada novamente;
+      * As chaves de acesso serão geradas e deverá clicar para salvar o arquivo, pois a secret não será apresentada novamente.
 
 
 
