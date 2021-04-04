@@ -87,8 +87,8 @@ Após criado o usuário no passo anterior, realize as seguintes etapas para cria
    2. No menu à esquerda clique em "users";
    3. Clique no usuário que você criou;
    4. Na janela que abrir, clique em `Security credentials`;
-      4.1. Clique em `Create acess key`;
-      4.2. As chaves de acesso serão geradas e deverá clicar para salvar o arquivo, pois a secret não será apresentada novamente;
+      * Clique em `Create acess key`;
+      * As chaves de acesso serão geradas e deverá clicar para salvar o arquivo, pois a secret não será apresentada novamente;
 
 
 
@@ -102,17 +102,17 @@ Após criado o usuário no passo anterior, realize as seguintes etapas para cria
    # Execute o comando abaixo para iniciar a configuração
    $ aws configure
    ```
-      2.1. Insira a `Acess Key` e tecle Enter;
-      2.2. Insira a `Secret Key` e tecle Enter;
-      2.3. Insira o código da região, no meu caso é `sa-east-1`;
-      2.4. No valor formato de saída, pode deixar `None` e tecle Enter.
+      * Insira a `Acess Key` e tecle Enter;
+      * Insira a `Secret Key` e tecle Enter;
+      * Insira o código da região, no meu caso é `sa-east-1`;
+      * No valor formato de saída, pode deixar `None` e tecle Enter.
 
 #### Instalação e Configuração do Terraform
 
    1. Clique no link para baixar o Terraform de acordo com seu sistema operacional [download Terraform](https://www.terraform.io/downloads.html):
-      1.1. No meu caso, estou utilizando Linux 64-bit, após clicar no link um arquivo será baixado.
+      * No meu caso, estou utilizando Linux 64-bit, após clicar no link um arquivo será baixado.
    2. Descompacte o arquivo e execute os comandos abaixo: 
-      2.1. [Roteiro de Instalação](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
+      * [Roteiro de Instalação](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
    ```bash
     $ echo $PATH
 
