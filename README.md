@@ -182,6 +182,8 @@ Entre em contato! 💚
 # <a name="licenca"><a/>  📝 Licença
 
 [![GitHub license](https://img.shields.io/github/license/ldynczuki/MLPlatformEngineer)](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/LICENSE)
+
+
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
 
