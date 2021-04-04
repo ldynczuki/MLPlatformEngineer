@@ -38,8 +38,9 @@ https://api.punkapi.com/v2/beers/random e ingere em um Kinesis Stream que terá 
 Para isso você será necessário configurar:
 
    1. Um CloudWatch Event que dispara a cada 5 minutos uma função Lambda para alimentar o Kinesis Stream que terá como saída:
-      ● Um Firehose agregando todas as entradas para guardar em um bucket S3 com o nome de `raw`.
-      ● Outro Firehose com um Data Transformation que pega somente os `id`, `name`, `abv`, `ibu`, `target_fg`, `target_og`, `ebc`, `srm` e `ph` das cervejas e guarda em um outro bucket S3 com o nome de `cleaned` em formato **csv**.
+      * Um Firehose agregando todas as entradas para guardar em um bucket S3 com o nome de `raw`.
+      
+      * Outro Firehose com um Data Transformation que pega somente os `id`, `name`, `abv`, `ibu`, `target_fg`, `target_og`, `ebc`, `srm` e `ph` das cervejas e guarda em um outro bucket S3 com o nome de `cleaned` em formato **csv**.
 
    2. Crie uma tabela com os dados do bucket `cleaned`.
 
