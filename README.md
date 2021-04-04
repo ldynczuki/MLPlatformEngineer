@@ -102,10 +102,10 @@ Após criado o usuário no passo anterior, realize as seguintes etapas para cria
    # Execute o comando abaixo para iniciar a configuração
    $ aws configure
    ```
-      * Insira a `Acess Key` e tecle Enter;
-      * Insira a `Secret Key` e tecle Enter;
-      * Insira o código da região, no meu caso é `sa-east-1`;
-      * No valor formato de saída, pode deixar `None` e tecle Enter.
+    * Insira a `Acess Key` e tecle Enter;
+    * Insira a `Secret Key` e tecle Enter;
+    * Insira o código da região, no meu caso é `sa-east-1`;
+    * No valor formato de saída, pode deixar `None` e tecle Enter.
 
 #### Instalação e Configuração do Terraform
 
