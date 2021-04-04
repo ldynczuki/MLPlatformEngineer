@@ -13,10 +13,6 @@ Tabela de conteúdos
    * [Instalação](#instalacao)
    * [Pré-Requisitos](#pre-requisitos)
    * [Como executar o projeto](#executar-terraform)
-   * [Remote files](#remote-files)
-   * [Multiple files](#multiple-files)
-   * [Combo](#combo)
-   * [Tests](#testes)
    * [Tecnologias](#tecnologias)
    * [Autor](#autor)
    * [Licença](#licenca)
@@ -32,6 +28,22 @@ Tabela de conteúdos
 
 - [ ] Criação dos scripts Terraform 
 - [x] Levantamento da arquitetura
+
+
+# <a name="sobre"><a/> 🏢 Sobre
+
+O presente projeto tem como objetivo implementar uma arquitetura completa que consome a [Punk API](https://punkapi.com/) no endpoint
+https://api.punkapi.com/v2/beers/random e ingere em um Kinesis Stream que terá 2 consumidores. 
+
+Para isso você será necessário configurar:
+
+   1. Um CloudWatch Event que dispara a cada 5 minutos uma função Lambda para alimentar o Kinesis Stream que terá como saída:
+      ● Um Firehose agregando todas as entradas para guardar em um bucket S3 com o nome de `raw`.
+      ● Outro Firehose com um Data Transformation que pega somente os `id`, `name`, `abv`, `ibu`, `target_fg`, `target_og`, `ebc`, `srm` e `ph` das cervejas e guarda em um outro bucket S3 com o nome de `cleaned` em formato **csv**.
+
+   2. Crie uma tabela com os dados do bucket `cleaned`.
+
+   3. Com base nos dados da tabela `cleaned`, treine um modelo de machine learning que classifique as cervejas em seus respectivos ibus.
 
 
 # <a name="arquitetura"><a/> 🏢 Arquitetura
