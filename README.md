@@ -26,8 +26,12 @@ Tabela de conteúdos
 
 ### Features
 
-- [ ] Criação dos scripts Terraform 
-- [x] Levantamento da arquitetura
+- [x] Levantamento da arquitetura sem integração do modelo
+- [ ] Divisão dos dados em: treino, validação, test para SageMaker
+- [ ] Criação dos scripts Terraform para SageMaker, API GateWay e Lambda que invoca o Endpoint
+- [ ] Criação dos scripts Terraform
+- [ ] Desenho da nova arquitetura com a integração do modelo 
+
 
 
 # <a name="sobre"><a/> 🏢 Sobre
@@ -211,3 +215,11 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment
 https://linuxhint.com/install_aws_cli_ubuntu/
+https://michael-timbs.medium.com/linear-regression-with-aws-sagemaker-15feefb19342
+https://towardsdatascience.com/using-aws-sagemakers-linear-learner-to-solve-regression-problems-36732d802ba6
+https://aws.amazon.com/pt/blogs/machine-learning/creating-a-machine-learning-powered-rest-api-with-amazon-api-gateway-mapping-templates-and-amazon-sagemaker/
+https://aws.amazon.com/pt/blogs/machine-learning/call-an-amazon-sagemaker-model-endpoint-using-amazon-api-gateway-and-aws-lambda/
+https://medium.com/analytics-vidhya/invoke-an-amazon-sagemaker-endpoint-using-aws-lambda-83ff1a9f5443
+https://medium.com/@gisely.alves/visualiza%C3%A7%C3%A3o-de-dados-com-seaborn-2fd0defd9adb
+https://docs.aws.amazon.com/sagemaker/latest/dg/xgboost.html
+https://towardsdatascience.com/xgboost-in-amazon-sagemaker-28e5e354dbcd
