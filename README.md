@@ -222,4 +222,3 @@ https://aws.amazon.com/pt/blogs/machine-learning/call-an-amazon-sagemaker-model-
 https://medium.com/analytics-vidhya/invoke-an-amazon-sagemaker-endpoint-using-aws-lambda-83ff1a9f5443
 https://medium.com/@gisely.alves/visualiza%C3%A7%C3%A3o-de-dados-com-seaborn-2fd0defd9adb
 https://docs.aws.amazon.com/sagemaker/latest/dg/xgboost.html
-https://towardsdatascience.com/xgboost-in-amazon-sagemaker-28e5e354dbcd
