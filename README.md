@@ -56,7 +56,7 @@ Para isso você será necessário configurar:
 # <a name="arquitetura"><a/> 🏢 Arquitetura
 
 <h1 align="center">
-  <img alt="Arquitetura" title="Arquitetura" src="./images/arquitetura.png" />
+  <img alt="Arquitetura" title="Arquitetura" src="./images/arquitetura_original.png" />
 </h1>
 
 
