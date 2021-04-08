@@ -204,13 +204,13 @@ Realizei uma análise para verificar quantas cervejas únicas existem nessa API 
 
 Ao buscar uma cerveja aleatória, é possível observar que existem muitas features, entretanto, o que iremos utilizar para o treinamento do modelo são as seguintes:
 
-- `abv` (Alcohol By Volume): indica o percentual em volume da quantidade de álcool em uma bebida.
-- `ibu` (International Bitterness Unit): uma sigla para a frase International Bitter Unit e representa uma escala, de 0 a 100, que mede o potencial de amargor conferido pelos lúpulos à cerveja.
-- `target_fg` (Final Gravity): quantidade de substâncias (açúcares, em geral) fermentáveis e não fermentáveis após a fermentação.
-- `target_og` (Original Gravity): quantidade de substâncias (açúcares, em geral) fermentáveis e não fermentáveis após a fervura, antes do início da fermentação.
-- `ebc` (European Brewing Convention): classifica como cerveja clara a cor com menos de 20 unidades EBC, e como cerveja escura a bebida com 20 ou mais unidades EBC.
-- `srm` (Standard Reference Method): utilizada para medir as cores da cerveja. A EBC, da Europa e a SRM dos EUA. No Brasil a escala usada é a EBC.
-- `ph`: em química, pH é uma escala numérica adimensional utilizada para especificar a acidez ou basicidade de uma solução aquosa.
+- **`abv` (Alcohol By Volume)**: indica o percentual em volume da quantidade de álcool em uma bebida.
+- **`ibu` (International Bitterness Unit)**: uma sigla para a frase International Bitter Unit e representa uma escala, de 0 a 100, que mede o potencial de amargor conferido pelos lúpulos à cerveja.
+- **`target_fg` (Final Gravity)**: quantidade de substâncias (açúcares, em geral) fermentáveis e não fermentáveis após a fermentação.
+- **`target_og` (Original Gravity)**: quantidade de substâncias (açúcares, em geral) fermentáveis e não fermentáveis após a fervura, antes do início da fermentação.
+- **`ebc` (European Brewing Convention)**: classifica como cerveja clara a cor com menos de 20 unidades EBC, e como cerveja escura a bebida com 20 ou mais unidades EBC.
+- **`srm` (Standard Reference Method)**: utilizada para medir as cores da cerveja. A EBC, da Europa e a SRM dos EUA. No Brasil a escala usada é a EBC.
+- **`ph`**: em química, pH é uma escala numérica adimensional utilizada para especificar a acidez ou basicidade de uma solução aquosa.
 
 
 Pois bem, apresentado uma breve explicação sobre o funcionamento da Punk API e seus dados, a seguir será exposto o trabalho implementado.
