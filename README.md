@@ -11,11 +11,11 @@ Tabela de conteúdos
 <!--ts-->
    * [Sobre](#sobre)
    * [Arquitetura](#arquitetura)
-   * [Execução do Desafio](#execucao_desafio)
    * [Pré-Requisitos](#pre-requisitos)
    * [Instalação](#instalacao)
    * [Como executar o projeto](#executar-terraform)
    * [Tecnologias](#tecnologias)
+   * [Execução do Desafio](#execucao_desafio)
    * [Autor](#autor)
    * [Licença](#licenca)
    * [Referências](#referencias)
@@ -58,21 +58,6 @@ Para isso você será necessário configurar:
 <h1 align="center">
   <img alt="Arquitetura" title="Arquitetura" src="./images/arquitetura_original.png" />
 </h1>
-
-
-# <a name="execucao_desafio"><a/> ❕Execução do Desafio
-
-Siga os passos abaixo para a entrega do desafio:
-
-   1. Criar uma conta gratuita na `AWS`.
-
-   2. Você deve utilizar `Terraform` para construir a arquitetura de uma maneira reproduzível em outras contas.
-
-   3. Todas as funções `Lambdas` devem ser desenvolvidas em `Python` assim como o modelo de machine learning.
-
-   4. O modelo de machine learning deve ser apresentado em um Jupyter Notebook, local ou remoto. O arquivo do notebook estar no repositório do github.
-
-   5. Bônus (não obrigatório): Integre o modelo de machine learning em sua arquitetura.
 
 
 # <a name="pre-requisitos"><a/> ☑️ Pré-Requisitos
@@ -190,6 +175,35 @@ As seguintes linguagens foram usadas na construção do projeto:
 #### API REST
 
  - [Amazon API Gateway](https://aws.amazon.com/en/api-gateway/)
+
+
+# <a name="execucao_desafio"><a/> ❕Execução do Desafio
+
+Siga os passos abaixo para a entrega do desafio:
+
+   1. Criar uma conta gratuita na `AWS`.
+
+   2. Você deve utilizar `Terraform` para construir a arquitetura de uma maneira reproduzível em outras contas.
+
+   3. Todas as funções `Lambdas` devem ser desenvolvidas em `Python` assim como o modelo de machine learning.
+
+   4. O modelo de machine learning deve ser apresentado em um Jupyter Notebook, local ou remoto. O arquivo do notebook estar no repositório do github.
+
+   5. Bônus (não obrigatório): Integre o modelo de machine learning em sua arquitetura.
+
+
+## Arquitetura da implementação
+
+<h1 align="center">
+  <img alt="Arquitetura" title="Arquitetura" src="./images/arquitetura_final.png" />
+</h1>
+
+### **Legenda**
+
+<h1 align="center">
+  <img alt="Arquitetura" title="Arquitetura" src="./images/legenda_arquitetura_final.png" />
+</h1>
+
 
 
 # <a name="autor"><a/> 🤓 Autor
