@@ -206,6 +206,7 @@ Siga os passos abaixo para a entrega do desafio:
 
 ### Detalhes da implementação
 
+[#f03c15](teste)
 **Item 2. Para acessar o diretório onde estão os scripts `Terraform` clique [aqui](https://github.com/ldynczuki/MLPlatformEngineer/tree/main/code/terraform)**
 
 **Item 3. Para acessar o diretório onde estão as funções `Lambdas` desenvolvidas em `Python` clique [aqui](https://github.com/ldynczuki/MLPlatformEngineer/tree/main/code/terraform)**:
