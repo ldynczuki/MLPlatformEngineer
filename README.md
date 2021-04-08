@@ -232,17 +232,30 @@ Pois bem, apresentado uma breve explicação sobre o funcionamento da Punk API e
 
 
 **Item 4**. Treinamento do modelo de machine learning (local):
+* Esta etapa faz parte do **Fluxo de Treinamento de modelo de machine learning localmente com Jupyter Notebook** apresentado na imagem da arquitetura da implementação.
 * Conforme apresentado o item 4., foi realizado o treinamento de um modelo de machine learning (local), o qual foi utilizado o Jupyter Notebook, onde é possível acessá-lo clicando [aqui](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/code/models/local-notebook/model-ml-platform.ipynb). 
 * Nesta etapa, criei um objeto client do `AWS Glue` para encontrar a tabela `cleaned` e a localização da fonte de dados transformados no `bucket S3`. 
 * Após encontrar a localização dos dados, criei um DataFrame dos dados do `bucket S3` e iniciei a análise exploratório dos dados, onde foi possível verificar que a feature `abv` é a que possui maior correlação com a nossa coluna target `ibu`. Deste modo, irei realizar 2 treinamentos, o primeiro utilizando todas as features e outro treinamento apenas com a feature `abv` e irei comparar os resultados finais.
 * Antes do treinamento do modelo é essencial realizar o pré-processamento dos dados, onde foram eliminadas as colunas não utilizadas para o treinamento, tais como `id` e `name`, apliquei também uma conversão destes dados para **numpy array** com o tipo de dados float32 e, por fim, a divisão da base de dados em treinamento e teste, em uma proporção de 80% e 20%, respectivamente.
-* Com os dados pré-processados, realizei o treinamento do modelo utilizando a técnica de regressão linear múltipla e simples.
+* Com os dados pré-processados, realizei o treinamento do modelo utilizando o algoritmo de regressão linear múltipla e simples.
 * Posteriormente o treino dos modelos, foi realizada a avaliação dos modelos utilizando as seguintes métricas: **MAE** (_Mean Absolute Error_), **MSE** (_Mean Squared Error_), **RMSE** (_Root Mean Squared Error_) e	**R2 Square**.
 * Foi possível observar no DataFrame final dos resultados no [notebook](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/code/models/local-notebook/model-ml-platform.ipynb) que o modelo de regressão linear múltipla obteve um melhor resultado.
-* É importante salientar que, com a baixa quantidade de amostras distintas não foi possível obter um bom resultado durante o treinamento e que também existem outras técnicas de machine learning que podem alcançar melhores resultados. Todavia, o objetivo deste treinamento foi acessar os metadados do `AWS Glue`, obter a localização e os dados no `bucket S3` e realizar o treinamento.
+* É importante salientar que, com a baixa quantidade de amostras distintas não foi possível obter um bom resultado durante o treinamento e que também existem outros algoritmos de machine learning que podem alcançar melhores resultados. Todavia, o objetivo deste treinamento foi acessar os metadados do `AWS Glue`, obter a localização e os dados no `bucket S3` e realizar o treinamento.
 
 
 **Item 5**. Integre o modelo de machine learning em sua arquitetura:
+* Esta etapa faz parte do **Fluxo de Treinamento de modelo de machine learning com SageMaker até o consumo do mesmo via API** apresentado na imagem da arquitetura da implementação.
+* Escolhi o serviço `SageMaker` da Amazon para o treinamento do modelo por possuir algoritmos que possuem métodos que facilitam a implantação e criação de endpoints para o consumo do serviço, o que facilita na integração do modelo na arquitetura do projeto.
+* As etapas iniciais do treinamento do modelo são similares ao treinamento local, onde criei o objeto client do `AWS Glue` para encontrar a tabela `cleaned` e a localização da fonte de dados transformados no `bucket S3`. Após encontrar a localização dos dados, criei um DataFrame dos dados do `bucket S3` e iniciei a análise exploratório dos dados, a mesma análise feita no notebook local.
+* Na etapa de pré-processamento, utilizei os mesmos tratamentos do treinamento local, a fim de comparar os resultados finais entre o modelo treinado com o `Linear Regression` (scikit-learn) e `Linear Learner` (SageMaker).
+* **EXPLICAR O TREINAMENTO DE REGRESSÃO MÚLTIPLA**
+* O algoritmo escolhido para o treinamento foi o `Linear Learner` que é comparado ao `Linear Regression` do scikit-learn. Como dito acima, o interessante dos algoritmos do SageMaker é a facilidade da implantação do mesmo, após realizar o treinamento basta executar o método `deploy()` passando os parâmetros `initial_instance_count` e `instance_type = 'ml.m4.xlarge` (que são parâmetros para configuração do serviço a ser consumido, quantidade de instâncias e o tipo da configuração da instância no Amazon EC2). Após essa execução é criado um endpoint para o consumo do modelo recém treinado.
+* Uma vez que o modelo tenha sido treinado e implantado em uma instância da Amazon EC2, criei uma função `Lambda` que enviará dados para o endpoint. Nessa função criei um verificador que irá procurar por endpoints existentes em minha conta AWS que comecem por `linear-learner`, pois o endpoint criado possui a data e hora do treinamento, e para automatizar a utilização do endpoint atualizado, realizei essa procura, ao invés de ir na função e inserir o nome do endpoint manualmente. Para acessar o diretório dessa função `Lambda` clique [aqui](https://github.com/ldynczuki/MLPlatformEngineer/tree/main/code/terraform), ela está compactada no formato .zip com a nomenclatura `lambda_call_endpoint.zip`.
+* Com a função `Lambda` criada na etapa anterior, criei uma API REST utilizando o serviço `Amazon API Gateway` que possibilita enviar requisições `post` com os dados para a predição do modelo para a função `Lambda` que por fim envia para o endpoint do modelo e retorna o `score` da inferência, informando o valor o `ibu` de acordo com os valores informados na requisição.
+* É possível utilizar a API Gateway pela interface do serviço `Amazon API Gateway` quando por uma ferramenta externa, por exemplo o `Postman` que utilizei nesse projeto. Segue abaixo imagens da requisição e o retorno do resultado da inferência (predição). Para utilizar o `Postman` basta copiar a **url** com o endpoint criado pela API Gateway, configurar para a requisição ser `post` e criar um `json` com chave `data` e os valores das features de treinamento (na mesma ordem).
+* **INSERIR IMAGEM DA REQUISIÇÃO VIA API GATEWAY E VIA POSTMAN**
+
+
 
 
 
@@ -289,6 +302,7 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment
 https://linuxhint.com/install_aws_cli_ubuntu/
+https://docs.aws.amazon.com/sagemaker/latest/dg/linear-learner.html
 https://michael-timbs.medium.com/linear-regression-with-aws-sagemaker-15feefb19342
 https://towardsdatascience.com/using-aws-sagemakers-linear-learner-to-solve-regression-problems-36732d802ba6
 https://aws.amazon.com/pt/blogs/machine-learning/creating-a-machine-learning-powered-rest-api-with-amazon-api-gateway-mapping-templates-and-amazon-sagemaker/
