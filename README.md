@@ -2,6 +2,7 @@
 
 O projeto consiste em implementar uma arquitetura completa que consome a Punk Api no
 [endpoint](https://api.punkapi.com/v2/beers/random) e ingere em um Kinesis Stream que terá 2 consumidores.
+Com os dados processados, treinar um modelo de machine learning e integrar à arquitetura.
 
 
 
@@ -10,6 +11,7 @@ Tabela de conteúdos
 <!--ts-->
    * [Sobre](#sobre)
    * [Arquitetura](#arquitetura)
+   * [Execução do Desafio](#execucao_desafio)
    * [Pré-Requisitos](#pre-requisitos)
    * [Instalação](#instalacao)
    * [Como executar o projeto](#executar-terraform)
@@ -50,8 +52,6 @@ Para isso você será necessário configurar:
 
    3. Com base nos dados da tabela `cleaned`, treine um modelo de machine learning que classifique as cervejas em seus respectivos ibus.
 
-   4. O Amazon SageMaker será utilizado para integrar o modelo de machine learning à presente arquitetura.
-
 
 # <a name="arquitetura"><a/> 🏢 Arquitetura
 
@@ -59,6 +59,20 @@ Para isso você será necessário configurar:
   <img alt="Arquitetura" title="Arquitetura" src="./images/arquitetura_original.png" />
 </h1>
 
+
+# <a name="execucao_desafio"><a/> ❕Execução do Desafio
+
+Siga os passos abaixo para a entrega do desafio:
+
+   1. Criar uma conta gratuita na `AWS`.
+
+   2. Você deve utilizar `Terraform` para construir a arquitetura de uma maneira reproduzível em outras contas.
+
+   3. Todas as funções `Lambdas` devem ser desenvolvidas em `Python` assim como o modelo de machine learning.
+
+   4. O modelo de machine learning deve ser apresentado em um Jupyter Notebook, local ou remoto. O arquivo do notebook estar no repositório do github.
+
+   5. Bônus (não obrigatório): Integre o modelo de machine learning em sua arquitetura.
 
 
 # <a name="pre-requisitos"><a/> ☑️ Pré-Requisitos
