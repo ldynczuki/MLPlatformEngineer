@@ -36,7 +36,7 @@ Tabela de conteúdos
 
 
 
-# <a name="sobre"><a/> 🏢 Sobre
+# <a name="sobre"><a/> Sobre
 
 O presente projeto tem como objetivo implementar uma arquitetura completa que consome a [Punk API](https://punkapi.com/) no endpoint
 https://api.punkapi.com/v2/beers/random e ingere em um Kinesis Stream que terá 2 consumidores. 
@@ -207,7 +207,7 @@ Siga os passos abaixo para a entrega do desafio:
 ### Detalhes da implementação
 
 **Treinamento do modelo de machine learning local**
-* Conforme apresentado o item 4., foi realizado o treinamento de um modelo de machine learning, o qual foi utilizado o Jupyter Notebook, onde é possível acessá-lo clicando [aqui](https://github.com/ldynczuki/MLPlatformEngineer/tree/main/code/models/local-notebook).
+* Conforme apresentado o item 4., foi realizado o treinamento de um modelo de machine learning, o qual foi utilizado o Jupyter Notebook, onde é possível acessá-lo clicando [aqui](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/code/models/local-notebook/model-ml-platform.ipynb).
 
 
 
