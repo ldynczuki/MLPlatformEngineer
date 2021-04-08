@@ -204,6 +204,13 @@ Siga os passos abaixo para a entrega do desafio:
   <img alt="Arquitetura" title="Arquitetura" src="./images/legenda_arquitetura_final.png" />
 </h1>
 
+### Detalhes da implementação
+
+**Treinamento do modelo de machine learning local**
+* Conforme apresentado o item 4., foi realizado o treinamento de um modelo de machine learning, o qual foi utilizado o Jupyter Notebook, onde é possível acessá-lo clicando [aqui](https://github.com/ldynczuki/MLPlatformEngineer/tree/main/code/models/local-notebook).
+
+
+
 
 
 # <a name="autor"><a/> 🤓 Autor
