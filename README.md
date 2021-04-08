@@ -176,7 +176,7 @@ As seguintes linguagens foram usadas na construção do projeto:
 - [AWS Lambda](https://aws.amazon.com/en/lambda/)
 - [Amazon Kinesis](https://aws.amazon.com/en/kinesis/)
 - [Amazon Kinesis Data Firehose](https://aws.amazon.com/en/kinesis/data-firehose/)
-- [AWS Glue](https://aws.amazon.com/pt/glue/)
+- [AWS Glue](https://aws.amazon.com/en/glue/)
 
 #### Plataforma de Machine Learning
 
@@ -184,7 +184,12 @@ As seguintes linguagens foram usadas na construção do projeto:
 
 #### Scheduler e monitoramento de serviços
 
-- [Amazon Cloudwatch](https://aws.amazon.com/pt/cloudwatch/)
+- [Amazon Cloudwatch](https://aws.amazon.com/en/cloudwatch/)
+
+
+#### API REST
+
+ - [Amazon API Gateway](https://aws.amazon.com/en/api-gateway/)
 
 
 # <a name="autor"><a/> 🤓 Autor
