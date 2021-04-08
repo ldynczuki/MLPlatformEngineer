@@ -33,14 +33,14 @@ https://api.punkapi.com/v2/beers/random e ingere em um Kinesis Stream que terá 
 
 Para isso você será necessário configurar:
 
-   **1.** Um CloudWatch Event que dispara a cada 5 minutos uma função Lambda para alimentar o Kinesis Stream que terá como saída:
+   1. Um CloudWatch Event que dispara a cada 5 minutos uma função Lambda para alimentar o Kinesis Stream que terá como saída:
       * Um Firehose agregando todas as entradas para guardar em um bucket S3 com o nome de `raw`.
 
       * Outro Firehose com um Data Transformation que pega somente os `id`, `name`, `abv`, `ibu`, `target_fg`, `target_og`, `ebc`, `srm` e `ph` das cervejas e guarda em um outro bucket S3 com o nome de `cleaned` em formato **csv**.
 
-   **2.** Crie uma tabela com os dados do bucket `cleaned`.
+   2. Crie uma tabela com os dados do bucket `cleaned`.
 
-   **3.** Com base nos dados da tabela `cleaned`, treine um modelo de machine learning que classifique as cervejas em seus respectivos ibus.
+   3. Com base nos dados da tabela `cleaned`, treine um modelo de machine learning que classifique as cervejas em seus respectivos ibus.
 
 
 # <a name="arquitetura"><a/> 🏢 Arquitetura
@@ -58,9 +58,9 @@ Para isso você será necessário configurar:
 
 #### Criação de usuário/grupo no AWS IAM
 
-   **1.** Entre no console da AWS e pesquise pelo serviço **IAM**;
-   **2**. No menu à esquerda clique em "users";
-   **3.** Clique no botão "add user";
+   1. Entre no console da AWS e pesquise pelo serviço **IAM**;
+   2. No menu à esquerda clique em "users";
+   3. Clique no botão "add user";
       * Insira um nome para o usuário, no meu caso foi `admin`;
       * Em `Select AWS access type` marque a primeira caixa `Programmatic access Enables an access key ID and secret access key for the AWS API, CLI, SDK, and other development tools.`;
       * Clique em `Next:Permissions`;
@@ -76,10 +76,10 @@ Para isso você será necessário configurar:
 
 Após criado o usuário no passo anterior, realize as seguintes etapas para criar as `acess_key`:
 
-   **1.** Entre no console da AWS e pesquise pelo serviço **IAM**;
-   **2.** No menu à esquerda clique em "users";
-   **3.** Clique no usuário que você criou;
-   **4.** Na janela que abrir, clique em `Security credentials`;
+   1. Entre no console da AWS e pesquise pelo serviço **IAM**;
+   2. No menu à esquerda clique em "users";
+   3. Clique no usuário que você criou;
+   4. Na janela que abrir, clique em `Security credentials`;
       * Clique em `Create acess key`;
       * As chaves de acesso serão geradas e deverá clicar para salvar o arquivo, pois a secret não será apresentada novamente.
 
@@ -89,8 +89,8 @@ Após criado o usuário no passo anterior, realize as seguintes etapas para cria
 
 #### Instalação e Configuração do AWS CLI
 
-   **1.** Neste projeto, estou utilizando o sistema operacional Linux. Utilize o seguinte roteiro para a instalação [instalação AWS CLI](https://linuxhint.com/install_aws_cli_ubuntu/)
-   **2.** Com o AWS CLI instalado, você deverá configurar suas credenciais:
+   1. Neste projeto, estou utilizando o sistema operacional Linux. Utilize o seguinte roteiro para a instalação [instalação AWS CLI](https://linuxhint.com/install_aws_cli_ubuntu/)
+   2. Com o AWS CLI instalado, você deverá configurar suas credenciais:
    ```bash
    # Execute o comando abaixo para iniciar a configuração
    $ aws configure
@@ -102,9 +102,9 @@ Após criado o usuário no passo anterior, realize as seguintes etapas para cria
 
 #### Instalação e Configuração do Terraform
 
-   **1.** Clique no link para baixar o Terraform de acordo com seu sistema operacional [download Terraform](https://www.terraform.io/downloads.html):
+   1. Clique no link para baixar o Terraform de acordo com seu sistema operacional [download Terraform](https://www.terraform.io/downloads.html):
       * No meu caso, estou utilizando Linux 64-bit, após clicar no link um arquivo será baixado.
-   **2.** Descompacte o arquivo e execute os comandos abaixo: 
+   2. Descompacte o arquivo e execute os comandos abaixo: 
       * [Roteiro de Instalação](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
    ```bash
     $ echo $PATH
@@ -171,15 +171,15 @@ As seguintes linguagens foram usadas na construção do projeto:
 
 Siga os passos abaixo para a entrega do desafio:
 
-   **1.** Criar uma conta gratuita na `AWS`.
+   1. Criar uma conta gratuita na `AWS`.
 
-   **2.** Você deve utilizar `Terraform` para construir a arquitetura de uma maneira reproduzível em outras contas.
+   2. Você deve utilizar `Terraform` para construir a arquitetura de uma maneira reproduzível em outras contas.
 
-   **3.** Todas as funções `Lambdas` devem ser desenvolvidas em `Python` assim como o modelo de machine learning.
+   3. Todas as funções `Lambdas` devem ser desenvolvidas em `Python` assim como o modelo de machine learning.
 
-   **4.** O modelo de machine learning deve ser apresentado em um Jupyter Notebook, local ou remoto. O arquivo do notebook estar no repositório do github.
+   4. O modelo de machine learning deve ser apresentado em um Jupyter Notebook, local ou remoto. O arquivo do notebook estar no repositório do github.
 
-   **5.** Bônus (não obrigatório): Integre o modelo de machine learning em sua arquitetura.
+   5. Bônus: Integre o modelo de machine learning em sua arquitetura.
 
 
 ## Entendimento dos dados da Punk API
