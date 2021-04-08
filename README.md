@@ -200,7 +200,7 @@ Siga os passos abaixo para a entrega do desafio:
 
 ### **Legenda**
 
-<h1 align="center">
+<h1 align="left">
   <img alt="Arquitetura" title="Arquitetura" src="./images/legenda_arquitetura_final.png" />
 </h1>
 
