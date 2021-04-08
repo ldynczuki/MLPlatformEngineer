@@ -196,6 +196,25 @@ Siga os passos abaixo para a entrega do desafio:
 
 É de suma importância passar um bom tempo analisando os dados que queremos consumir, tratar e treinar modelos. Deste modo, irei apresentar alguns pontos importantes sobre a Punk API antes do projeto implementado.
 
+Para acessar a página principal da Punk API (Versão 2) clique [aqui](https://punkapi.com/documentation/v2).
+
+Basicamente, essa API possui dados de cervejas e podem consumir esses dados de diversas formas. Para este desafio iremos utilizar o endpoint `https://api.punkapi.com/v2/beers/random` que busca uma cerveja aleatória.
+
+Realizei uma análise para verificar quantas cervejas únicas existem nessa API e encontrei o valor de 325. Portanto, independente da quantidade de vezes que busquemos uma cerveja aleatória, a quantidade de cervejas únicas serão de 325. Este é um valor baixo de amostras para se obter um resultado bom em uma modelagem de machine learning.
+
+Ao buscar uma cerveja aleatória, é possível observar que existem muitas features, entretanto, o que iremos utilizar para o treinamento do modelo são as seguintes:
+
+- `abv` (Alcohol By Volume): indica o percentual em volume da quantidade de álcool em uma bebida.
+- `ibu` (International Bitterness Unit): uma sigla para a frase International Bitter Unit e representa uma escala, de 0 a 100, que mede o potencial de amargor conferido pelos lúpulos à cerveja.
+- `target_fg` (Final Gravity): quantidade de substâncias (açúcares, em geral) fermentáveis e não fermentáveis após a fermentação.
+- `target_og` (Original Gravity): quantidade de substâncias (açúcares, em geral) fermentáveis e não fermentáveis após a fervura, antes do início da fermentação.
+- `ebc` (European Brewing Convention): classifica como cerveja clara a cor com menos de 20 unidades EBC, e como cerveja escura a bebida com 20 ou mais unidades EBC.
+- `srm` (Standard Reference Method): utilizada para medir as cores da cerveja. A EBC, da Europa e a SRM dos EUA. No Brasil a escala usada é a EBC.
+- `ph`: em química, pH é uma escala numérica adimensional utilizada para especificar a acidez ou basicidade de uma solução aquosa.
+
+
+Pois bem, apresentado uma breve explicação sobre o funcionamento da Punk API e seus dados, a seguir será exposto o trabalho implementado.
+
 
 
 ## Arquitetura da implementação
@@ -279,3 +298,5 @@ https://aws.amazon.com/pt/blogs/machine-learning/call-an-amazon-sagemaker-model-
 https://medium.com/analytics-vidhya/invoke-an-amazon-sagemaker-endpoint-using-aws-lambda-83ff1a9f5443
 https://medium.com/@gisely.alves/visualiza%C3%A7%C3%A3o-de-dados-com-seaborn-2fd0defd9adb
 https://docs.aws.amazon.com/sagemaker/latest/dg/xgboost.html
+http://blog.cervejarialeopoldina.com.br/entenda-como-funciona-a-coloracao-das-cervejas/#:~:text=Standard%20Reference%20Method%20(SRM)&text=Esse%20%C3%A9%20um%20nome%20complicado,equivalem%20a%2010%20unidades%20EBC.
+https://www.cervejaemalte.com.br/blog/como-fazer-a-correcao-da-densidade/#:~:text=FG%20%3D%20Final%20Gravity%20%3D%20Densidade%20Final,e%20a%20densidade%20da%20%C3%A1gua.
