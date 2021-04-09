@@ -260,8 +260,6 @@ Pois bem, apresentado uma breve explicação sobre o funcionamento da Punk API e
 
 
 
-
-
 # <a name="autor"><a/> 🤓 Autor
 
 Lucas Dynczuki
