@@ -270,6 +270,7 @@ Pois bem, apresentado uma breve explicação sobre o funcionamento da Punk API e
 * No final do [notebook](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/code/models/sagemaker-notebook/model-sagemaker.ipynb) SageMaker é realizado a exclusão do endpoint, para evitar a cobrança do serviço ativo.
 
 
+
 # <a name="autor"><a/> 🤓 Autor
 
 Lucas Dynczuki
