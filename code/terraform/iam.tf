@@ -51,6 +51,9 @@ resource "aws_iam_policy" "aws_iam_platform_policy" {
                 "xray:BatchGetTraces",
                 "sagemaker:ListEndpoints",
                 "sagemaker:InvokeEndpoint",
+                "sagemaker:CreateTrainingJob",
+                "sagemaker:CreateModel",
+                "sagemaker:DescribeLogStreams",
                 "sagemaker:*"
             ],
             "Resource": "*"
@@ -140,7 +143,22 @@ resource "aws_iam_policy" "aws_iam_platform_policy" {
                 "logs:GetLogEvents",
                 "logs:FilterLogEvents"
             ],
-            "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*"
+            "Resource": [
+                "arn:aws:logs:*:*:log-group:/aws/lambda/*",
+                "arn:aws:logs:*:*:log-group:/aws/sagemaker/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:PassRole"
+            ],
+            "Resource": "arn:aws:iam::*:role/*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:PassedToService": "sagemaker.amazonaws.com"
+                }
+            }
         }
     ]
 }
