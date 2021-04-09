@@ -312,6 +312,9 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/clou
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role
 https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sagemaker_notebook_instance
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/api_gateway_rest_api
+https://registry.terraform.io/modules/terraform-aws-modules/iam/aws/latest
 https://linuxhint.com/install_aws_cli_ubuntu/
 https://docs.aws.amazon.com/sagemaker/latest/dg/linear-learner.html
 https://michael-timbs.medium.com/linear-regression-with-aws-sagemaker-15feefb19342
