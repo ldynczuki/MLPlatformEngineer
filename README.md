@@ -21,11 +21,6 @@ Tabela de conteúdos
    * [Referências](#referencias)
 <!--te-->
 
-<h4 align="center"> 
-	🚧 🚀 Em construção...  🚧
-</h4>
-
-
 # <a name="sobre"><a/> Sobre
 
 O presente projeto tem como objetivo implementar uma arquitetura completa que consome a [Punk API](https://punkapi.com/) no endpoint
@@ -253,7 +248,7 @@ Pois bem, apresentado uma breve explicação sobre o funcionamento da Punk API e
 * Como dito acima, o interessante dos algoritmos do SageMaker é a facilidade da implantação do mesmo, após realizar o treinamento basta executar o método `deploy()` passando os parâmetros `initial_instance_count` e `instance_type` (que são parâmetros para configurar da quantidade e o tipo da instância no Amazon EC2). Após essa execução é criado um endpoint para o consumo do modelo recém treinado. **Observação**: Antes da criação do endpoint do modelo atualizado, é feita uma verificação se existe algum endpoint antigo e faz a exclusão para conter apenas o do modelo mais atual.
 * Uma vez que o modelo tenha sido treinado e implantado em uma instância da Amazon EC2, criei uma função `Lambda` que enviará dados para o endpoint. Nessa função criei um verificador que irá procurar por endpoints existentes em minha conta AWS que comecem por `linear-learner`, pois o endpoint criado possui a data e hora do treinamento e, para automatizar a utilização do endpoint atualizado, realizei essa procura, ao invés de ir na função e inserir o nome do endpoint manualmente. Para acessar o diretório dessa função `Lambda` clique [aqui](https://github.com/ldynczuki/MLPlatformEngineer/tree/main/code/terraform), ela está compactada no formato .zip com a nomenclatura `lambda_call_endpoint.zip`.
 * Com a função `Lambda` criada na etapa anterior, implementei uma API REST (script `Terraform`) utilizando o serviço `Amazon API Gateway` que possibilita enviar requisições `post` com os dados para a predição do modelo para a função `Lambda` que por fim envia para o endpoint do modelo e retorna o `score` da inferência, informando o valor o `ibu` de acordo com os valores informados na requisição.
-* É possível utilizar a API Gateway pela interface do serviço `Amazon API Gateway` quando por uma ferramenta externa, por exemplo o `Postman` que utilizei nesse projeto. Segue abaixo imagens da requisição e o retorno do resultado da inferência (predição). Para utilizar o `Postman` basta copiar a **url** com o endpoint criado pela API Gateway, configurar para a requisição ser `post` e criar um `json` com chave `data` e os valores das features de treinamento (na mesma ordem).
+* É possível utilizar a API Gateway pela interface do serviço `Amazon API Gateway` quando por uma ferramenta externa, por exemplo o `Postman` que utilizei nesse projeto. Segue abaixo imagens da requisição e o retorno do resultado da inferência (predição). Para utilizar o `Postman` basta copiar a **URL** com o endpoint criado pela API Gateway, configurar para a requisição ser `post` e criar um `json` com chave `data` e os valores das features de treinamento (na mesma ordem).
 * Posteriormente a criação da API Gateway ter sido criada, clique nela para acessar suas propriedades. Conforme pode ser visto na imagem abaixo, clique na opção "Stage" e depois no método "POST" e será apresentado a URL que poderá ser utilizada em uma ferramenta externa, tais como o Postman.
 <h1 align="center">
   <img alt="Arquitetura" title="Arquitetura" src="./images/amazon_api_gateway_url.png" />
@@ -265,11 +260,14 @@ Pois bem, apresentado uma breve explicação sobre o funcionamento da Punk API e
   <img alt="Arquitetura" title="Arquitetura" src="./images/amazon_api_gateway.png" />
 </h1>
 
+* Como mencionado anteriormente, é possível utilizar a URL que foi apresentada anteriormente e inserir no Postman, configurando para criar uma requisição `POST` e no campo `Body` inserir o json correto para o envio da inferência do `ibu` pelo modelo treinado e implantado. Veja a imagem abaixo o exemplo.
+
+<h1 align="center">
+  <img alt="Arquitetura" title="Arquitetura" src="./images/postman.png" />
+</h1>
 
 
-**INSERIR IMAGEM DA REQUISIÇÃO VIA API GATEWAY E VIA POSTMAN**
 * No final do [notebook](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/code/models/sagemaker-notebook/model-sagemaker.ipynb) SageMaker é realizado a exclusão do endpoint, para evitar a cobrança do serviço ativo.
-
 
 
 
