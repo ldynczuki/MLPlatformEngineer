@@ -262,7 +262,7 @@ Pois bem, apresentado uma breve explicação sobre o funcionamento da Punk API e
 * Podemos testar a inferência do modelo pela interface da Amazon API Gateway, para isso clique em `Resources`, depois no método `POST`, depois clique em `Test`. Por fim, será apresentada a imagem abaixo, veja que no campo `Request Body` foi inserido o json de requisição com os dados para a inferência do valor do `ibu`. Já no campo `Response Body` é apresentado o resultado do score retornado pelo modelo treinado e implantado.
 
 <h1 align="center">
-  <img alt="Arquitetura" title="Arquitetura" src="./images/amazon_api_gateway_url.png" />
+  <img alt="Arquitetura" title="Arquitetura" src="./images/amazon_api_gateway.png" />
 </h1>
 
 
