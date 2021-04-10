@@ -26,7 +26,7 @@ Tabela de conteúdos
 O presente projeto tem como objetivo implementar uma arquitetura completa que consome a [Punk API](https://punkapi.com/) no endpoint
 https://api.punkapi.com/v2/beers/random e ingere em um Kinesis Stream que terá 2 consumidores. 
 
-Para isso você será necessário configurar:
+Para isso será necessário configurar:
 
    1. Um CloudWatch Event que dispara a cada 5 minutos uma função Lambda para alimentar o Kinesis Stream que terá como saída:
       * Um Firehose agregando todas as entradas para guardar em um bucket S3 com o nome de `raw`.
@@ -148,13 +148,17 @@ As seguintes linguagens foram usadas na construção do projeto:
 - [Amazon Kinesis Data Firehose](https://aws.amazon.com/en/kinesis/data-firehose/)
 - [AWS Glue](https://aws.amazon.com/en/glue/)
 
-#### Plataforma de Machine Learning
+#### Armazenamento de dados
 
-- [Amazon SageMaker](https://aws.amazon.com/en/sagemaker/)
+- [Amazon S3](https://aws.amazon.com/en/s3/)
 
 #### Scheduler e monitoramento de serviços
 
 - [Amazon Cloudwatch](https://aws.amazon.com/en/cloudwatch/)
+
+#### Plataforma de Machine Learning
+
+- [Amazon SageMaker](https://aws.amazon.com/en/sagemaker/)
 
 
 #### API REST
@@ -223,12 +227,12 @@ Pois bem, apresentado uma breve explicação sobre o funcionamento da Punk API e
 
 
 **Item 3**. Para acessar o diretório onde estão as funções `Lambdas` desenvolvidas em `Python` clique [aqui](https://github.com/ldynczuki/MLPlatformEngineer/tree/main/code/terraform):
-* Para a implementação do desafio, as funções `Lambda` foram compactadas em formato .zip e possuem os seguintes nomes: `lambda_data_processing.zip`, `lambda_data_processing.zip` e `lambda_call_endpoint.zip`.
+* Para a implementação do desafio, as funções `Lambda` foram compactadas em formato .zip e possuem os seguintes nomes: `lambda_data_processing.zip`, `lambda_data_transformation.zip` e `lambda_call_endpoint.zip`.
 
 
 **Item 4**. Treinamento do modelo de machine learning (local):
 * Esta etapa faz parte do **Fluxo de Treinamento de modelo de machine learning localmente com Jupyter Notebook** apresentado na imagem da arquitetura da implementação.
-* Conforme apresentado o item 4., foi realizado o treinamento de um modelo de machine learning (local), o qual foi utilizado o Jupyter Notebook, onde é possível acessá-lo clicando [aqui](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/code/models/local-notebook/model-ml-platform.ipynb). 
+* Foi realizado o treinamento de um modelo de machine learning (local), o qual foi utilizado o Jupyter Notebook, onde é possível acessá-lo clicando [aqui](https://github.com/ldynczuki/MLPlatformEngineer/blob/main/code/models/local-notebook/model-ml-platform.ipynb). 
 * Nesta etapa, criei um objeto client do `AWS Glue` para encontrar a tabela `cleaned` e a localização da fonte de dados transformados no `bucket S3`. 
 * Após encontrar a localização dos dados, criei um DataFrame dos dados do `bucket S3` e iniciei a análise exploratório dos dados, onde foi possível verificar que a feature `abv` é a que possui maior correlação com a nossa coluna target `ibu`. Deste modo, irei realizar 2 treinamentos, o primeiro utilizando todas as features e outro treinamento apenas com a feature `abv` e irei comparar os resultados finais.
 * Antes do treinamento do modelo é essencial realizar o pré-processamento dos dados, onde foram eliminadas as colunas não utilizadas para o treinamento, tais como `id` e `name`, apliquei também uma conversão destes dados para **numpy array** com o tipo de dados float32 e, por fim, a divisão da base de dados em treinamento e teste, em uma proporção de 80% e 20%, respectivamente.
@@ -299,6 +303,7 @@ https://aws.amazon.com/en/kinesis/data-firehose/
 https://aws.amazon.com/en/glue/
 https://aws.amazon.com/pt/cloudwatch/
 https://aws.amazon.com/en/sagemaker/
+https://aws.amazon.com/en/s3/
 https://www.terraform.io/downloads.html
 https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
 https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started
